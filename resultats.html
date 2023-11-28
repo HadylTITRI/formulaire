@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Résultats</title>
+</head>
+<body>
+    <H2>Les informations indroduites dans le formulaire sont:</H2>
+    <p id="results"></p>
+
+    <script>
+        var params = new URLSearchParams(window.location.search);
+        var nom = params.get("nom");
+        var prenom = params.get("prenom");
+        var fonction = params.get("fonction");
+        var organisme = params.get("organisme");
+
+        document.getElementById('results').innerHTML =
+         "Nom : "+ nom + "<br>Prénom : " + prenom + "<br>Fonction : " + fonction +
+         "<br>Organisme : " + organisme;
+
+    </script>
+</body>
+</html>

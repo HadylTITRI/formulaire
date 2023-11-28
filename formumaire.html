@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulaire</title>
+</head>
+<body>
+    <div>
+        <form id="formulaire" method="post">
+            <legend>Formulaire</legend>
+            <div>
+                <label>Nom</label>
+                <input type="text" name="nom" placeholder="Nom" class="nom" />
+            </div>
+            <div>
+                <label>Prénom</label>
+                <input type="text" name="prenom" placeholder="Prénom" class="prenom" />
+            </div>
+            <div>
+                <label>Fonction</label>
+                <input type="text" name="fonction" placeholder="Fonction" class="fonction" />
+            </div>
+            <div>
+                <label>Organisme</label>
+                <input type="text" name="organisme" placeholder="Organisme" class="organisme" />
+            </div>
+            <div>
+                <input type="button" class="btn" value="Envoyer" onclick="afficherInfos()"/>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function afficherInfos(){
+            var nom = document.getElementById("formulaire").elements["nom"].value;
+            var prenom = document.getElementById("formulaire").elements["prenom"].value;
+            var fonction = document.getElementById("formulaire").elements["fonction"].value;
+            var organisme = document.getElementById("formulaire").elements["organisme"].value;
+
+            window.location.href = "resultats.html?nom=" + nom + "&prenom=" + prenom + "&fonction=" + fonction + "&organisme=" + organisme;
+
+         }
+        
+    </script>
+</body>
+</html>
